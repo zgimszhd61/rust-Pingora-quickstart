@@ -1,4 +1,53 @@
 # rust-Pingora-quickstart
+Pingora是一个用Rust编写的框架，主要用于构建快速、可靠且可编程的网络系统。以下是Pingora的主要用途和功能：
+
+### 1. HTTP代理服务
+Pingora可以用来构建HTTP代理服务，支持HTTP/1和HTTP/2的端到端代理，还支持gRPC和WebSocket代理[1][2][3][4]。
+
+### 2. 负载均衡
+Pingora提供了多种负载均衡算法，如轮询（Round Robin）和哈希（Hashing），并允许用户自定义负载均衡和故障转移策略[1][3][4]。
+
+### 3. 安全通信
+Pingora支持通过OpenSSL或BoringSSL进行TLS加密，确保通信的安全性，并且符合FIPS标准和后量子加密技术[1][2][3][4]。
+
+### 4. 高性能和多线程
+Pingora是一个异步多线程框架，能够高效地处理大量并发请求，节省CPU和内存资源[2][3][4][5]。
+
+### 5. 可编程性和定制化
+Pingora提供了高度可编程的API，允许用户自定义服务的处理、转换和转发请求的方式。这使得Pingora非常适合构建高级和个性化的网关或负载均衡器[1][2][3][4]。
+
+### 6. 零停机重启
+Pingora支持零停机的优雅重启，允许在不丢失任何请求的情况下升级服务[1][3][4]。
+
+### 7. 观察性工具
+Pingora集成了多种观察性工具，如Syslog、Prometheus、Sentry和OpenTelemetry，方便监控和调试[1][3][4]。
+
+### 8. 内存缓存
+Pingora提供了异步的内存缓存功能，带有缓存锁以防止缓存雪崩[1]。
+
+### 9. 连接复用
+Pingora通过共享连接来提高网络连接的利用效率，减少新连接的建立，从而节省时间和资源[2][5]。
+
+### 10. 合规性和安全性
+Pingora通过与Internet Security Research Group (ISRG)的Prossimo项目合作，推动在互联网关键基础设施中采用内存安全的框架[3][7][11]。
+
+总的来说，Pingora是一个功能强大且灵活的框架，适用于构建各种高性能、安全且可定制的网络服务。
+
+Citations:
+[1] https://github.com/cloudflare/pingora
+[2] https://www.infoq.com/news/2024/03/cloudflare-open-sources-pingora/
+[3] https://blog.cloudflare.com/pingora-open-source
+[4] https://www.phoronix.com/news/Cloudflare-Pingora-Open-Source
+[5] https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet
+[6] https://www.youtube.com/watch?v=BnLSNf_KiPc
+[7] https://linuxiac.com/cloudflare-pingora-framework-gets-open-source/
+[8] https://www.phoronix.com/news/Cloudflare-Pingora-0.1
+[9] https://news.itsfoss.com/cloudflare-pingora/
+[10] https://news.ycombinator.com/item?id=39535969
+[11] https://www.memorysafety.org/blog/introducing-river/
+[12] https://github.com/cloudflare/pingora/blob/main/README.md?plain=1
+[13] https://docs.rs/crate/pingora-core/latest
+
 以下是一个使用Rust语言的Pingora框架构建基本负载均衡器的快速入门示例：
 
 ### 创建一个新的Cargo项目
